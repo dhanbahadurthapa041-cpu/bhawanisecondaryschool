@@ -1,13 +1,12 @@
 import { createBrowserClient } from '@supabase/ssr';
 
 export function createClient() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  if (!supabaseUrl || !supabaseAnonKey) {
-    // If environment variables are not yet configured, provide graceful warning
+  if (!supabaseUrl || !supabaseAnonKey || supabaseUrl.includes('placeholder')) {
     console.warn(
-      'Supabase environment variables (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY) are missing.'
+      'Supabase environment variables (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY) are missing from the build. Please ensure they are set in Vercel and trigger a Redeploy.'
     );
   }
 
