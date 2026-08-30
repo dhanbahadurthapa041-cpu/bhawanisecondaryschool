@@ -1,0 +1,126 @@
+export type Language = 'en' | 'ne';
+
+export const translations = {
+  en: {
+    schoolName: "Shree Bhawani Secondary School",
+    schoolNepaliName: "श्री भवानी माध्यमिक विद्यालय",
+    location: "Badhaiyatal 3 Semara, Bardiya",
+    locationNepali: "बधैयाताल ३ सेमरा, बर्दिया",
+    tagline: "Empowering Minds, Shaping Futures with Excellence & Integrity",
+    established: "2040 B.S. (1983 A.D.)",
+    affiliation: "Government of Nepal / National Examination Board (NEB)",
+    headTeacherPhone: "9858037940",
+    accountantPhone: "9848060643",
+    email: "bhawanisecondaryschool2040@gmail.com",
+    officeHours: "Sunday - Friday: 9:00 AM - 4:30 PM",
+    
+    // Navigation
+    nav: {
+      home: "Home",
+      about: "About Us",
+      academics: "Academics",
+      admissions: "Admissions",
+      news: "News & Notices",
+      staff: "Our Staff",
+      contact: "Contact",
+      applyNow: "Apply Now",
+      staffPortal: "Staff Portal",
+    },
+
+    // Homepage
+    home: {
+      urgentNotice: "Notice",
+      readNotice: "Read Notice",
+      heroBadge: "Nurturing Excellence Since 2040 B.S.",
+      heroTitle: "Inspiring Knowledge, Character & Community Leadership",
+      heroDesc: "Welcome to Shree Bhawani Secondary School, Badhaiyatal-3, Bardiya. Dedicated to quality, inclusive, and modern education from Early Childhood Development (ECD) through Class 12.",
+      admissionsCTA: "Admission Inquiries",
+      explorePrograms: "Explore Academics",
+      principalMessageTitle: "Message from the Head Teacher",
+      principalMessageSubtitle: "Leadership & Academic Vision",
+      principalMessageText: "At Shree Bhawani Secondary School, we are deeply committed to providing an inspiring learning environment where every child can realize their fullest potential. With the support of our dedicated teachers, school management committee, and community parents, we foster discipline, academic rigor, and civic integrity from ECD through Grade 12.",
+      principalRole: "Head Teacher",
+      academicCurriculumTitle: "Comprehensive Curriculum: ECD to Class 12",
+      academicCurriculumDesc: "Structured educational pathways approved by the Curriculum Development Centre (CDC) and National Examination Board (NEB).",
+      whyChooseTitle: "Why Choose Shree Bhawani Secondary School",
+      whyChooseDesc: "A supportive environment cultivating academic excellence, discipline, and practical life skills.",
+      readyToJoin: "Ready to Begin Your Educational Journey?",
+      readyToJoinDesc: "Admissions are open for the current academic session. Contact our administrative office for details.",
+      viewAllNews: "View All News & Notices",
+    },
+
+    // Common
+    common: {
+      readMore: "Read More",
+      viewDetails: "View Details",
+      contactUs: "Contact Us",
+      phone: "Phone",
+      emailLabel: "Email",
+      addressLabel: "Address",
+      allRightsReserved: "All rights reserved.",
+      headTeacher: "Head Teacher",
+      accountant: "Accountant / Office",
+    },
+  },
+  ne: {
+    schoolName: "श्री भवानी माध्यमिक विद्यालय",
+    schoolNepaliName: "श्री भवानी माध्यमिक विद्यालय",
+    location: "बधैयाताल ३ सेमरा, बर्दिया",
+    locationNepali: "बधैयाताल ३ सेमरा, बर्दिया",
+    tagline: "गुणस्तरीय शिक्षा, सुदृढ भविष्य र नैतिक मूल्यमान्यता",
+    established: "२०४० वि.सं.",
+    affiliation: "नेपाल सरकार / राष्ट्रिय परीक्षा बोर्ड (NEB)",
+    headTeacherPhone: "९८५८०३७९४०",
+    accountantPhone: "९८४८०६०६४३",
+    email: "bhawanisecondaryschool2040@gmail.com",
+    officeHours: "आइतबार - शुक्रबार: बिहान ९:०० - दिउँसो ४:३०",
+
+    // Navigation
+    nav: {
+      home: "गृहपृष्ठ",
+      about: "हाम्रो बारेमा",
+      academics: "शैक्षिक कार्यक्रम",
+      admissions: "भर्ना जानकारी",
+      news: "सूचना तथा समाचार",
+      staff: "शिक्षक तथा कर्मचारी",
+      contact: "सम्पर्क",
+      applyNow: "भर्ना आवेदन",
+      staffPortal: "प्रशासन पोर्टल",
+    },
+
+    // Homepage
+    home: {
+      urgentNotice: "सूचना",
+      readNotice: "सूचना हेर्नुहोस्",
+      heroBadge: "वि.सं. २०४० देखि गुणस्तरीय शिक्षामा समर्पित",
+      heroTitle: "ज्ञान, संस्कार र सक्षम नेतृत्वको विकास",
+      heroDesc: "श्री भवानी माध्यमिक विद्यालय, बधैयाताल-३ सेमरा, बर्दियामा स्वागत छ। प्रारम्भिक बालविकास (ECD) देखि कक्षा १२ सम्म आधुनिक, समावेशी तथा गुणस्तरीय शिक्षा प्रदान गर्न हामी प्रतिबद्ध छौं।",
+      admissionsCTA: "भर्ना सम्बन्धी जानकारी",
+      explorePrograms: "शैक्षिक कार्यक्रमहरू",
+      principalMessageTitle: "प्रधानाध्यापकको सन्देश",
+      principalMessageSubtitle: "नेतृत्व तथा शैक्षिक प्रतिबद्धता",
+      principalMessageText: "श्री भवानी माध्यमिक विद्यालयमा हामी प्रत्येक विद्यार्थीको सर्वाङ्गीण विकासका लागि प्रेरणादायी वातावरण सिर्जना गर्न समर्पित छौं। हाम्रा लगनशील शिक्षक, विद्यालय व्यवस्थापन समिति र अभिभावकहरूको सहकार्यमा हामी बालबालिकालाई संस्कारयुक्त, अनुशासित र सक्षम नागरिक बनाउन अग्रसर छौं।",
+      principalRole: "प्रधानाध्यापक",
+      academicCurriculumTitle: "प्रारम्भिक बालविकास (ECD) देखि कक्षा १२ सम्मको शिक्षा",
+      academicCurriculumDesc: "पाठ्यक्रम विकास केन्द्र (CDC) तथा राष्ट्रिय परीक्षा बोर्ड (NEB) द्वारा स्वीकृत स्तरीय पाठ्यक्रम।",
+      whyChooseTitle: "श्री भवानी माध्यमिक विद्यालय किन रोज्ने?",
+      whyChooseDesc: "अनुशासित वातावरण, अनुभवी शिक्षक र विद्यार्थीको सर्वाङ्गीण विकासका लागि उत्कृष्ट स्थल।",
+      readyToJoin: "तपाईंको बालबालिकाको सुनौलो भविष्यका लागि आजै जोडिनुहोस्",
+      readyToJoinDesc: "शैक्षिक सत्रका लागि भर्ना खुला छ। थप जानकारीका लागि विद्यालय प्रशासनमा सम्पर्क गर्नुहोस्।",
+      viewAllNews: "सबै समाचार तथा सूचनाहरू हेर्नुहोस्",
+    },
+
+    // Common
+    common: {
+      readMore: "विस्तृत विवरण",
+      viewDetails: "जानकारी हेर्नुहोस्",
+      contactUs: "सम्पर्क गर्नुहोस्",
+      phone: "फोन",
+      emailLabel: "इमेल",
+      addressLabel: "ठेगाना",
+      allRightsReserved: "सर्वाधिकार सुरक्षित।",
+      headTeacher: "प्रधानाध्यापक",
+      accountant: "लेखापाल / प्रशासन",
+    },
+  },
+};
