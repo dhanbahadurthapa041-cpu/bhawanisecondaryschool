@@ -92,7 +92,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
               {language === 'ne'
-                ? 'श्री भवानी माध्यमिक विद्यालय, बधैयाताल-३ सेमरा, बर्दिया। भर्ना, परीक्षा तथा अन्य जानकारीका लागि सम्पर्क गर्नुहोस्।'
+                ? 'श्री भवानी माध्यमिक विद्यालय, बढैयाताल-३ सेमरा, बर्दिया। भर्ना, परीक्षा तथा अन्य जानकारीका लागि सम्पर्क गर्नुहोस्।'
                 : `We welcome parents, students, alumni, and community members to reach out to ${SCHOOL_INFO.name}, Badhaiyatal, Bardiya.`}
             </p>
           </div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                     <p className="mt-0.5 font-medium text-slate-800">
                       {language === 'ne' ? SCHOOL_INFO.addressNepali : SCHOOL_INFO.address}
                     </p>
-                    <p className="text-xs text-slate-500">Lumbini Province, Nepal</p>
+                    <p className="text-xs text-slate-500">{language === 'ne' ? 'लुम्बिनी प्रदेश, नेपाल' : 'Lumbini Province, Nepal'}</p>
                   </div>
                 </div>
 
@@ -140,7 +140,7 @@ export default function ContactPage() {
                         {SCHOOL_INFO.headTeacherPhone}
                       </a>
                     </p>
-                    <p className="text-xs text-slate-500">Direct mobile for leadership inquiries</p>
+                    <p className="text-xs text-slate-500">{language === 'ne' ? 'प्रधानाध्यापक प्रत्यक्ष सम्पर्क' : 'Direct mobile for leadership inquiries'}</p>
                   </div>
                 </div>
 
@@ -158,7 +158,7 @@ export default function ContactPage() {
                         {SCHOOL_INFO.accountantPhone}
                       </a>
                     </p>
-                    <p className="text-xs text-slate-500">Fees, certificates & administration</p>
+                    <p className="text-xs text-slate-500">{language === 'ne' ? 'शुल्क, प्रमाणपत्र तथा प्रशासनिक शाखा' : 'Fees, certificates & administration'}</p>
                   </div>
                 </div>
 
@@ -186,10 +186,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900 text-xs uppercase tracking-wider">
-                      Working Hours
+                      {language === 'ne' ? 'कार्यालय समय' : 'Working Hours'}
                     </h3>
-                    <p className="mt-0.5 font-medium">{SCHOOL_INFO.officeHours}</p>
-                    <p className="text-xs text-slate-500">Sunday to Friday</p>
+                    <p className="mt-0.5 font-medium">{language === 'ne' ? 'आइतबार - शुक्रबार: बिहान ९:०० - दिउँसो ४:३०' : SCHOOL_INFO.officeHours}</p>
+                    <p className="text-xs text-slate-500">{language === 'ne' ? 'शनिबार तथा सार्वजनिक बिदाका दिन बन्द' : 'Sunday to Friday (Closed on Saturdays & Holidays)'}</p>
                   </div>
                 </div>
               </div>

@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
                 {SCHOOL_INFO.name}
               </span>
               <span className="text-[11px] text-slate-500 font-medium hidden sm:inline">
-                {language === 'ne' ? 'बधैयाताल-३ सेमरा, बर्दिया' : 'Badhaiyatal-3 Semara, Bardiya'} &bull; Estd. 2040 B.S.
+                {language === 'ne' ? 'बढैयाताल-३ सेमरा, बर्दिया' : 'Badhaiyatal-3 Semara, Bardiya'} &bull; Estd. 2040 B.S.
               </span>
             </div>
           </Link>

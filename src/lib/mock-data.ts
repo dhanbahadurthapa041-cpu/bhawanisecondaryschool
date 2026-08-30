@@ -29,7 +29,7 @@ export const SCHOOL_INFO = {
   established: "2040 B.S.",
   affiliation: "Government of Nepal / National Examination Board (NEB)",
   address: "Badhaiyatal 3 Semara, Bardiya, Nepal",
-  addressNepali: "बधैयाताल ३ सेमरा, बर्दिया",
+  addressNepali: "बढैयाताल ३ सेमरा, बर्दिया",
   headTeacherPhone: "9858037940",
   accountantPhone: "9848060643",
   email: "bhawanisecondaryschool2040@gmail.com",
