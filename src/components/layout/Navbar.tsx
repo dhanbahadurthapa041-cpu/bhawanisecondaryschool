@@ -31,12 +31,12 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition-all">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20 min-h-[5rem] gap-2">
           {/* Logo & School Name */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white group-hover:scale-105 transition-transform duration-200 shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0 min-w-0">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-xs border border-slate-200 bg-white group-hover:scale-105 transition-transform duration-200 shrink-0">
               <Image
                 src={SCHOOL_INFO.logoUrl}
                 alt="Shree Bhawani Secondary School Logo"
@@ -45,31 +45,31 @@ export const Navbar: React.FC = () => {
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xs font-semibold text-amber-700 tracking-wide">
+            <div className="flex flex-col min-w-0">
+              <span className="text-[11px] sm:text-xs font-semibold text-amber-700 tracking-wide truncate">
                 {SCHOOL_INFO.nepaliName}
               </span>
-              <span className="text-base sm:text-lg font-bold font-heading text-slate-900 leading-tight group-hover:text-blue-900 transition-colors">
+              <span className="text-sm sm:text-base xl:text-lg font-bold font-heading text-slate-900 leading-tight group-hover:text-blue-900 transition-colors truncate">
                 {SCHOOL_INFO.name}
               </span>
-              <span className="text-[11px] text-slate-500 font-medium hidden sm:inline">
+              <span className="text-[10px] sm:text-[11px] text-slate-500 font-medium hidden md:inline truncate">
                 {language === 'ne' ? 'बढैयाताल-३ सेमरा, बर्दिया' : 'Badhaiyatal-3 Semara, Bardiya'} &bull; Estd. 2040 B.S.
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 shrink-0">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`px-2 py-1.5 xl:px-3 xl:py-2 rounded-lg text-xs xl:text-sm font-medium whitespace-nowrap transition-all ${
                     active
                       ? 'text-blue-900 bg-blue-50 font-semibold shadow-xs'
-                      : 'text-slate-700 hover:text-blue-900 hover:bg-slate-100/70'
+                      : 'text-slate-700 hover:text-blue-900 hover:bg-slate-100/80'
                   }`}
                 >
                   {link.name}
@@ -79,18 +79,18 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/admissions"
-              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium shadow-sm hover:shadow transition-all duration-150 active:scale-95"
+              className="ml-1 xl:ml-2 inline-flex items-center gap-1 px-3 py-1.5 xl:px-4 xl:py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs xl:text-sm font-medium shadow-xs hover:shadow transition-all duration-150 active:scale-95 whitespace-nowrap shrink-0"
             >
               <span>{t.nav.applyNow}</span>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden shrink-0">
             <Link
               href="/admissions"
-              className="px-3 py-1.5 rounded-md bg-amber-600 text-white text-xs font-medium"
+              className="px-2.5 py-1.5 rounded-md bg-amber-600 text-white text-xs font-medium whitespace-nowrap"
             >
               {t.nav.applyNow}
             </Link>
