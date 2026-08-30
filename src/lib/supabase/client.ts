@@ -1,17 +1,12 @@
 import { createBrowserClient } from '@supabase/ssr';
 
+const DEFAULT_SUPABASE_URL = 'https://wmaxgssluilvvjtolzeo.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndtYXhnc3NsdWlsdnZqdG9semVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgwODEzMTcsImV4cCI6MjEwMzY1NzMxN30.1AttJB6uAAuF3WhqHKIBZpvmSwiIMidoERQHbtuN960';
+
 export function createClient() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || DEFAULT_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || DEFAULT_SUPABASE_ANON_KEY;
 
-  if (!supabaseUrl || !supabaseAnonKey || supabaseUrl.includes('placeholder')) {
-    console.warn(
-      'Supabase environment variables (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY) are missing from the build. Please ensure they are set in Vercel and trigger a Redeploy.'
-    );
-  }
-
-  return createBrowserClient(
-    supabaseUrl || 'https://placeholder.supabase.co',
-    supabaseAnonKey || 'placeholder-anon-key'
-  );
+  return createBrowserClient(supabaseUrl, supabaseAnonKey);
 }
