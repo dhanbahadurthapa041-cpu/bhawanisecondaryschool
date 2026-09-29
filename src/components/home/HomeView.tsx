@@ -153,53 +153,90 @@ export const HomeView: React.FC<HomeViewProps> = ({ latestNews }) => {
         </div>
       </section>
 
-      {/* 3. Welcome Message from the Head Teacher (With Real Photo) */}
+      {/* 3. Messages from Head Teacher & Asst. Head Teacher */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-4 flex justify-center">
-              <div className="relative w-64 sm:w-72 aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-amber-100 bg-slate-100">
-                <Image
-                  src={SCHOOL_INFO.principalPhotoUrl}
-                  alt="Head Teacher - Shree Bhawani Secondary School"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent p-4 text-white">
-                  <p className="font-heading font-bold text-sm">Head Teacher</p>
-                  <p className="text-[11px] text-amber-400 font-medium">
-                    {SCHOOL_INFO.name}, Bardiya
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-900 text-xs font-bold uppercase tracking-wider">
+              <BookOpen className="w-3.5 h-3.5 text-blue-700" />
+              <span>{t.home.principalMessageSubtitle}</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {/* Head Teacher Card */}
+            <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+              <div className="flex justify-center">
+                <div className="relative w-64 sm:w-72 aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-amber-100 bg-slate-100">
+                  <Image
+                    src={SCHOOL_INFO.principalPhotoUrl}
+                    alt="Head Teacher - Shree Bhawani Secondary School"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent p-4 text-white">
+                    <p className="font-heading font-bold text-sm">{t.home.principalRole}</p>
+                    <p className="text-[11px] text-amber-400 font-medium">
+                      {SCHOOL_INFO.name}, Bardiya
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-center sm:text-left">
+                <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900">
+                  {t.home.principalMessageTitle}
+                </h2>
+                <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                  <p>{t.home.principalMessageText}</p>
+                  <p>
+                    {language === 'ne'
+                      ? 'हाम्रो उद्देश्य विद्यार्थीहरूलाई किताबी ज्ञानमा मात्र सीमित नराखी नैतिक चरित्र, व्यावहारिक सीप र सामाजिक उत्तरदायित्व वहन गर्न सक्ने सक्षम नेतृत्वको रूपमा विकास गर्नु हो।'
+                      : 'We ensure balanced academic rigor paired with inclusive care, preparing our students for higher education, SEE milestones, and board examinations with excellence.'}
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-8 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-900 text-xs font-bold uppercase tracking-wider">
-                <BookOpen className="w-3.5 h-3.5 text-blue-700" />
-                <span>{t.home.principalMessageSubtitle}</span>
+            {/* Asst. Head Teacher / Vice-Principal Card */}
+            <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-5">
+              <div className="flex justify-center">
+                <div className="relative w-64 sm:w-72 aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-blue-100 bg-slate-100">
+                  <Image
+                    src={SCHOOL_INFO.vicePrincipalPhotoUrl}
+                    alt="Asst. Head Teacher - Shree Bhawani Secondary School"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent p-4 text-white">
+                    <p className="font-heading font-bold text-sm">{t.home.vicePrincipalRole}</p>
+                    <p className="text-[11px] text-amber-400 font-medium">
+                      {SCHOOL_INFO.name}, Bardiya
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900">
-                {t.home.principalMessageTitle}
-              </h2>
-              <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-                <p>{t.home.principalMessageText}</p>
-                <p>
-                  {language === 'ne'
-                    ? 'हाम्रो उद्देश्य विद्यार्थीहरूलाई किताबी ज्ञानमा मात्र सीमित नराखी नैतिक चरित्र, व्यावहारिक सीप र सामाजिक उत्तरदायित्व वहन गर्न सक्ने सक्षम नेतृत्वको रूपमा विकास गर्नु हो।'
-                    : 'We ensure balanced academic rigor paired with inclusive care, preparing our students for higher education, SEE milestones, and board examinations with excellence.'}
-                </p>
-              </div>
-              <div className="pt-2 flex items-center gap-4">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:text-blue-700 group"
-                >
-                  <span>{language === 'ne' ? 'विद्यालयको बारेमा थप जान्नुहोस्' : 'Learn more about our school & values'}</span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+
+              <div className="space-y-4 text-center sm:text-left">
+                <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900">
+                  {t.home.vicePrincipalMessageTitle}
+                </h2>
+                <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                  <p>{t.home.vicePrincipalMessageText}</p>
+                  <p>{t.home.vicePrincipalMessageText2}</p>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div className="pt-8 flex items-center justify-center">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:text-blue-700 group"
+            >
+              <span>{language === 'ne' ? 'विद्यालयको बारेमा थप जान्नुहोस्' : 'Learn more about our school & values'}</span>
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

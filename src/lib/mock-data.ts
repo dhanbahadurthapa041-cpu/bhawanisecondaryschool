@@ -36,6 +36,7 @@ export const SCHOOL_INFO = {
   officeHours: "Sunday - Friday: 9:00 AM - 4:30 PM",
   logoUrl: "/images/logo.jpg",
   principalPhotoUrl: "/images/principal.jpg",
+  vicePrincipalPhotoUrl: "/images/vice-principal.jpg",
   stats: [
     { label: "Years of Educational Service", value: "40+" },
     { label: "Grade Levels", value: "ECD – 12" },
